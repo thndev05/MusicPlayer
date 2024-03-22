@@ -24,5 +24,4 @@ As this is a new project, there may be UI and event-related issues in the websit
 Enjoy music hear! ^_^❤️
 https://thndev05.github.io/MusicPlayer/
 
-<img width="960" alt="product_img" src="https://github.com/thndev05/MusicPlayer/assets/138297165/2ef2de1c-950f-4e7b-a06b-7d4e28d68633">
-
+<img width="960" alt="product_img" src="https://github.com/thndev05/MusicPlayer/assets/138297165/04994b14-8776-48ec-9a49-1a3d1425b2c0">
