@@ -23,6 +23,6 @@ As this is a new project, there may be UI and event-related issues in the websit
 ## View
 Enjoy music hear! ^_^❤️
 
-[https://thndev05.github.io/MusicPlayer/](https://thndev05-musicplayer.vercel.app/)
+https://thndev05-musicplayer.vercel.app/
 
 <img width="960" alt="product_img" src="https://github.com/thndev05/MusicPlayer/assets/138297165/04994b14-8776-48ec-9a49-1a3d1425b2c0">
