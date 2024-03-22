@@ -1,0 +1,281 @@
+:root {
+  --primary-color: #ff0062;
+  --text-color: #333;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  
+}
+
+body {
+  position: relative;
+  background-color: #f5f5f5;
+  background-image: linear-gradient(150deg, rgb(160, 160, 215), rgb(238, 83, 222), rgb(244, 12, 12));
+} 
+
+html {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.player {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.player .icon-pause {
+  display: none;
+}
+
+.player.playing .icon-pause {
+  display: inline-block;
+}
+
+.player.playing .icon-play {
+  display: none;
+}
+
+.dashboard {
+  padding: 16px 16px 14px;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  max-width: 480px;
+  border-bottom: 1px solid #ebebeb;
+  /* border-radius: 20px; */
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 2px 4px 10px rgba(255, 254, 254, 1);
+  overflow: hidden;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  margin-bottom: 10px;
+  position: relative;
+}
+
+header h4 {
+  color: var(--primary-color);
+  font-size: 12px;
+  user-select: none;
+}
+
+header h2 {
+  color: var(--text-color);
+  font-size: 20px;
+}
+
+/* volume */
+.vol-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 20px;
+  transition: ease-in 0.2s;
+}
+
+.volume-slider {
+  position: absolute;
+  top: 50px;
+  left: 15px;
+  width: 80px;
+  height: 7px;
+  display: none;
+  transition: 0.2s;
+}
+
+.volume-slider.active {
+  display: block;
+}
+
+
+.vol-off {
+  display: none;
+}
+
+/* CD */
+.cd {
+  display: flex;
+  margin: auto;
+  width: 200px;
+}
+
+.cd-thumb {
+  width: 100%;
+  padding-top: 100%;
+  border-radius: 50%;
+  background-color: #333;
+  background-size: cover;
+  margin: auto;
+  background-position: center;
+  border: 3px solid var(--primary-color);
+}
+
+/* CONTROL */
+.control {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 18px 0 8px 0;
+}
+
+.control .btn {
+  color: #666;
+  padding: 18px;
+  font-size: 18px;
+}
+
+.control .btn.active {
+  color: var(--primary-color);
+}
+
+.control .btn-toggle-play {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  font-size: 24px;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-color);
+}
+
+.btn:hover {
+  cursor: pointer;
+  filter: brightness(80%);
+}
+
+.progress {
+  width: 100%;
+  -webkit-appearance: none;
+  height: 6px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  border-radius: 2px;
+}
+
+.progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  cursor: pointer;
+}
+
+.progress:hover {
+  cursor: pointer;
+  height: 7px;
+  transition: ease-out 0.2s;
+}
+
+
+/* PLAYLIST */
+.playlist {
+  margin-top: 408px;
+  padding: 12px;
+  border: 1.8px solid black;
+  border-radius: 15px;
+  background-color: #fff;
+  box-shadow: 1px 4px 4px rgb(255, 255, 255);
+}
+
+
+
+.song {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  background-color: #fff;
+  padding: 8px 16px;
+  border-radius: 5px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+  border: 2px solid black;
+}
+
+.song:hover {
+  cursor: pointer;
+  filter: zoomIn;
+}
+
+.song.active {
+  background-color: var(--primary-color);
+}
+
+.song:active {
+  opacity: 0.8;
+}
+
+.song:last-child {
+  margin-bottom: 0;
+}
+
+.song.active .option,
+.song.active .author,
+.song.active .title {
+  color: #fff;
+}
+
+.song .thumb {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-size: cover;
+  margin: 0 8px;
+  background-position: center;
+}
+
+.song .body {
+  flex: 1;
+  padding: 0 16px;
+  user-select: none;
+  /* cursor: pointer; */
+}
+
+.song .title {
+  font-size: 18px;
+  color: var(--text-color);
+}
+
+.song .author {
+  font-size: 12px;
+  color: #999;
+}
+
+.song .option {
+  padding: 16px 8px;
+  color: #999;
+  font-size: 18px;
+}
+
+/* scroll bar */
+/* Thiết lập thanh cuộn ngang và dọc */
+::-webkit-scrollbar {
+  width: 12px; /* Độ rộng của thanh cuộn ngang */
+  height: 12px; /* Độ cao của thanh cuộn dọc */
+}
+
+/* Thiết lập màu nền cho thanh cuộn */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Thiết lập phần cuộn */
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color); /* Màu nền của phần cuộn */
+  border-radius: 6px;
+}
+
